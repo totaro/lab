@@ -41,7 +41,15 @@ const dragDemo = document.getElementById( 'drag-and-drop' );
     let droppableLeaveHandler;
     let dropHandler;
 
+    let clear = document.querySelector( '.clear' );
+
     const moved = document.querySelector('.moved');
+    const copied = document.querySelector('.copied');
+    const draggable = document.querySelector('.draggable');
+
+    const firstP = copyable.children[ copyable.childElementCount - 0 ];
+        const pText2 = document.createTextNode('Move Me!');
+        const pEl2 = document.createElement('div');
 
     // childEl.remove();
     dragDemo.style.display = 'block';
@@ -124,11 +132,39 @@ const dragDemo = document.getElementById( 'drag-and-drop' );
           }
         
           droppable.classList.remove( 'active' );
+
+          
         
         
         };
+        
 
+    clear.addEventListener('click', (e)=>{
 
+    //   if(e.target.classList.contains('copied')){
+    //     console.log('copy delete')
+    // }
+
+    // const list = document.droppable.querySelector( 'droppable' );
+    const list = droppable.childNodes
+    
+    console.log(list, '!' )
+
+    droppable.querySelectorAll(".copied").forEach(el => el.remove());
+    droppable.querySelectorAll(".moved").forEach(el => el.remove());
+    // droppable.childNodes[3].remove()
+
+    // pEl2.appendChild(pText2);
+    // pEl2.setAttribute("class", "draggable item move")
+    // pEl2.setAttribute("draggable", "true")
+    // draggable.insertBefore(pEl2, firstP);
+    console.log('copy delete')
+
+    // while (list.hasChildNodes()) {
+    //   list.removeChild(list.firstChild);
+    // }
+      
+    })
 
     movable.addEventListener('dragstart', moveableDragStartHandler, false);
     movable.addEventListener('dragend', moveableDragEndHandler, false);
