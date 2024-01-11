@@ -205,7 +205,7 @@ section#hero{
         section#hero{
 
             height: calc(80vh - 100px);
-            border: 1px solid white;
+            /* border: 1px solid white; */
             
         }
         .dropdown_menu{
