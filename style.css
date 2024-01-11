@@ -201,7 +201,12 @@ section#hero{
     }
     
     @media(max-width: 576px){
-    
+
+        section#hero{
+
+            height: calc(80vh - 100px);
+            
+        }
         .dropdown_menu{
             left: 2rem;
             width: unset;
