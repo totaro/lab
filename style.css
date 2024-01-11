@@ -334,7 +334,11 @@ input:focus{
   
   .draggable.item {
     border: 2px white solid;
-    margin: 10px auto;
+    /* margin: 20px auto; */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     padding: 10px;
     
     border-radius: 10px;
