@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Totaro - Lab</title>
+</head>
+<body>
+
+    <header id="header">
+        <div class="navbar">
+            <div class="logo"><a href="https://totaro.github.io/">Totaro</a></div>
+            <ul class="links">
+                <li><a href="https://totaro.github.io/">Home</a></li>
+                <li><a href="https://totaro.github.io/motions/">Motions</a></li>
+                <li><a href="https://totaro.github.io/weather/">Weather</a></li>
+                <li><a href="https://totaro.github.io/dictionary/">Dictionary</a></li>
+                <li><a href="https://totaro.github.io/randomphotogallery/">Photo Gallery</a></li>
+                <li><a href="https://totaro.github.io/digitalclock/">Digital Clock</a></li>
+                <li><a href="https://totaro.github.io/reactbase/">Todo List</a></li>
+            </ul>
+            <!--<a href="#" class="action_btn">Contact Me!</a>-->
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li><a href="https://totaro.github.io/">Home</a></li>
+            <li><a href="https://totaro.github.io/motions/">Motions</a></li>
+            <li><a href="https://totaro.github.io/weather/">Weather</a></li>
+            <li><a href="https://totaro.github.io/dictionary/">Dictionary</a></li>
+            <li><a href="https://totaro.github.io/randomphotogallery/">Photo Gallery</a></li>
+            <li><a href="https://totaro.github.io/digitalclock/">Digital Clock</a></li>
+            <li><a href="https://totaro.github.io/reactbase/">Todo List</a></li>
+            <!--<li><a href="#" class="action_btn">Contact Me!</a></li>-->
+
+
+        </div>
+    </header>
+
+    <main><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with html/css/javascript.</div></div>
+    <div class="container">
+        <h1 class="heading">Drag and Drop</h1>
+        <!-- <input placeholder="Search a Word" type="text" class="input" id="input">
+        <p class="info-text" id="info-text">Type a word and press Enter</p>
+        <div class="meaning-container" id="meaning-container">
+            <p>Word Title: <span class="title" id="title">___</span></p>
+            <p>Meaning: <span class="meaning" id="meaning">___</span></p>
+            <p><audio src="" controls class="audio" id="audio"></audio></p>
+        </div> -->
+
+        <div id="drag-and-drop">
+            <div class="draggable items">
+              <!-- <h2>Draggables</h2> -->
+              <div class="draggable item move" draggable="true">Move Me!</div>
+              <div class="draggable item copy" draggable="true">Copy Me!</div>
+            </div>
+            <div class="droppable">
+              <h2>Drop Zone</h2>
+            </div>
+          </div>
+
+    </div>
+</section></main>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
