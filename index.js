@@ -28,7 +28,7 @@ function stickyHeader() {
 // drag and drop --------------------------------------------------
 
 
-const dragDemo = document.getElementById( 'drag-and-drop' );
+    const dragDemo = document.getElementById( 'drag-and-drop' );
     const movable = document.querySelector( '.move' );
     const copyable = document.querySelector( '.copy' );
     const droppable = document.querySelector( '.droppable' );
@@ -46,25 +46,21 @@ const dragDemo = document.getElementById( 'drag-and-drop' );
     const moved = document.querySelector('.moved');
     const copied = document.querySelector('.copied');
     const draggable = document.querySelector('.draggable');
-
-    const firstP = copyable.children[ copyable.childElementCount - 0 ];
-        const pText2 = document.createTextNode('Move Me!');
-        const pEl2 = document.createElement('div');
-
-    // childEl.remove();
+    
     dragDemo.style.display = 'block';
 
     moveableDragStartHandler = function moveableDragStartHandler(event){
 
             if(event.target.classList.contains('copy')){
                 copying = event.target;
-                // copying.classList.add( 'green' );
+               
+                
             }
 
             if(event.target.classList.contains('move')){
                 moving = event.target;
                 moving.classList.add('active');
-                // moving.classList.add( 'green' );
+                
             }
 
             event.dataTransfer.setData('text/plain', event.target.classList)
@@ -76,6 +72,7 @@ const dragDemo = document.getElementById( 'drag-and-drop' );
         
           event.target.classList.remove( 'active' );
           droppable.classList.remove( 'active' );
+          
           
         
         };
@@ -117,18 +114,31 @@ const dragDemo = document.getElementById( 'drag-and-drop' );
         
           if ( classes.indexOf( 'move' ) > -1 ) {
         
-            droppable.appendChild( moving );
-            moving.classList.remove( 'active' );
-            moving.classList.add( 'green' );
-            moving.classList.add( 'moved' );
+            newMove = moving.cloneNode( true );
+            droppable.appendChild( newMove );
+            newMove.classList.remove( 'active' );
+            newMove.classList.add( 'green' );
+            newMove.classList.add( 'moved' );
+            
+
+            if(newMove.classList.contains('moved')){
+              newMove.textContent = "Item moved";
+              moving.classList.add( 'hide' );
+              }
+
+            // droppable.appendChild( moving );
+            // moving.classList.remove( 'active' );
+            // moving.classList.add( 'green' );
+            // moving.classList.add( 'moved' );
                         
-            if(moving.classList.contains('moved')){
-                moving.textContent = "Item moved";
-            }
+            // if(moving.classList.contains('moved')){
+            //     moving.textContent = "Item moved";
+            // }
                        
-            console.log(moving.classList.contains('moved'))
+            console.log(newMove.classList.contains('moved'))
             moving = null;
-        
+
+                   
           }
         
           droppable.classList.remove( 'active' );
@@ -141,35 +151,19 @@ const dragDemo = document.getElementById( 'drag-and-drop' );
 
     clear.addEventListener('click', (e)=>{
 
-    //   if(e.target.classList.contains('copied')){
-    //     console.log('copy delete')
-    // }
-
-    // const list = document.droppable.querySelector( 'droppable' );
-    const list = droppable.childNodes
-    
-    console.log(list, '!' )
-
     droppable.querySelectorAll(".copied").forEach(el => el.remove());
     droppable.querySelectorAll(".moved").forEach(el => el.remove());
-    // droppable.childNodes[3].remove()
-
-    // pEl2.appendChild(pText2);
-    // pEl2.setAttribute("class", "draggable item move")
-    // pEl2.setAttribute("draggable", "true")
-    // draggable.insertBefore(pEl2, firstP);
-    console.log('copy delete')
-
-    // while (list.hasChildNodes()) {
-    //   list.removeChild(list.firstChild);
-    // }
-      
+    
+    movable.classList.remove( 'hide' );
+    
+          
     })
 
     movable.addEventListener('dragstart', moveableDragStartHandler, false);
     movable.addEventListener('dragend', moveableDragEndHandler, false);
 
     copyable.addEventListener('dragstart', moveableDragStartHandler, false);
+    
 
     droppable.addEventListener( 'dragenter', droppableEnterHandler, false );
     droppable.addEventListener( 'dragover', droppableEnterHandler, false );
