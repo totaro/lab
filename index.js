@@ -135,7 +135,7 @@ function stickyHeader() {
             //     moving.textContent = "Item moved";
             // }
                        
-            console.log(newMove.classList.contains('moved'))
+            // console.log(newMove.classList.contains('moved'))
             moving = null;
 
                    
