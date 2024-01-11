@@ -106,7 +106,7 @@ function stickyHeader() {
             newCopy.classList.add( 'copied' );
             
             if(newCopy.classList.contains('copied')){
-                newCopy.textContent = "Item copied";
+                newCopy.textContent = "Item Copied";
             }
             copying = null;
         
@@ -122,7 +122,7 @@ function stickyHeader() {
             
 
             if(newMove.classList.contains('moved')){
-              newMove.textContent = "Item moved";
+              newMove.textContent = "Item Moved";
               moving.classList.add( 'hide' );
               }
 
