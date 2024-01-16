@@ -468,7 +468,7 @@ input:focus{
 
   /*  dom node modifications -------------------- */
 
-  #drag-and-drop {
+  #dom-node {
     width: 100%;
     overflow: auto;
   }
