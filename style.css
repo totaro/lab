@@ -22,8 +22,8 @@ body{
     /* height: 100vh; */
     background-color: black;
     background-image: url('https://images.unsplash.com/photo-1583607264434-2d8e199b3a17?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-position: center;
+    /* background-size: cover;
+    background-position: center; */
 }
 
 
@@ -53,20 +53,79 @@ a:hover {
     position: fixed;
     top: 0;
     width: 100%;
+    margin-bottom: 10px;
   }
   
   .sticky + .contentX {
     padding-top: 60px;
   }
 
+  .sticky + .main + #hero{
+    padding-top: 0px;
+    margin-bottom: 0px
+  }
+
 /* Header */
 
-header {
+.wrapper{
+    color:white;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    padding: 0rem 2rem;
+    padding-top:1rem;
+    /* padding-top:1rem */
+
+}
+
+/* #header::after{
+    height:20px;
+
+}
+
+header.child{
+
+    background-color: #02ADDB;
+} */
+
+#header {
     position: relative;
     padding: 0 2rem;
     background: rgb(255, 255, 255, .1);
     backdrop-filter: blur(15px);
     z-index: 9999;
+    
+    
+}
+.main {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    
+    flex-direction: column;
+    /* border:1px solid green; */
+    /* margin-top:120px;
+    top:200px;
+    padding-block: 2rem; */
+}
+
+.contents{
+    position: relative;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+    border:1px solid green;
+    margin-top:70px;
+   
+
+
+}
+#header{
+    /* top:0; */
+    /* border:1px solid white; */
     /* margin-bottom:120px */
 }
 
@@ -184,8 +243,9 @@ section#hero{
     /* padding: 2rem; */
     padding-left:2rem;
     padding-right:2rem;
-    padding-top: 1.4rem;
-    margin-bottom: 10px;
+    padding-top:1rem;
+    
+    /* margin-bottom: 10px; */
 
 }
 #hero h1 {
@@ -234,15 +294,8 @@ section#hero{
         }
     }
 
-.wrapper{
 
-    display: flex;
-	align-items: center;
-	justify-content: center;
-    flex-direction: column;
-    padding: 0rem 2rem;
 
-}
 
 .container{
     margin: 20px;
