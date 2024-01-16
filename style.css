@@ -19,7 +19,7 @@
     font-family: 'Open Sans', sans-serif;
 }
 body{
-    height: 100vh;
+    /* height: 100vh; */
     background-color: black;
     background-image: url('https://images.unsplash.com/photo-1583607264434-2d8e199b3a17?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
@@ -67,6 +67,7 @@ header {
     background: rgb(255, 255, 255, .1);
     backdrop-filter: blur(15px);
     z-index: 9999;
+    /* margin-bottom:120px */
 }
 
 .navbar {
@@ -164,20 +165,30 @@ header {
 }
 
 /* Hero */
+.top {
+     margin-bottom:50px; 
+    top:0px;
+    border: 1px solid green;
+}
 
 section#hero{
 
-    height: calc(80vh - 120px);
+    /* height: calc(80vh - 120px); */
+    /* top:100px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 2rem;
+    /* padding: 2rem; */
+    padding-left:2rem;
+    padding-right:2rem;
+    padding-top: 1.4rem;
+    margin-bottom: 10px;
 
 }
-#hero h1{
+#hero h1 {
     font-size: 1rem;
     margin-bottom: 0.5rem;
 }
@@ -204,7 +215,7 @@ section#hero{
 
         section#hero{
 
-            height: calc(80vh - 100px);
+            /* height: calc(80vh - 100px); */
             /* border: 1px solid white; */
             
         }
@@ -223,7 +234,15 @@ section#hero{
         }
     }
 
+.wrapper{
 
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+    padding: 0rem 2rem;
+
+}
 
 .container{
     margin: 20px;
@@ -238,6 +257,8 @@ section#hero{
     font-weight: 500;
     color:white;
     margin-top: 10px;
+    
+   
 }
 
 .labheader{
@@ -263,6 +284,8 @@ section#hero{
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 28px;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
     padding-bottom: 1rem;
