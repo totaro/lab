@@ -169,3 +169,4 @@ function stickyHeader() {
     droppable.addEventListener( 'dragover', droppableEnterHandler, false );
     droppable.addEventListener( 'dragleave', droppableLeaveHandler, false );
     droppable.addEventListener( 'drop', dropHandler, false );
+
