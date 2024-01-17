@@ -546,8 +546,23 @@ input:focus{
     color: orange;
   }
 
+  .linkinput,
+  .textinput{
+    padding:0.2rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 9rem;
+  }
+
   .hide{
     display: none;
     visibility: 0;
 
+  }
+
+  .linkempty,
+  .textempty{
+    /* border: 1px solid red; */
+    background-color: red;
   }

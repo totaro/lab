@@ -29,9 +29,9 @@
     const pText4 = document.createTextNode('New target node');
     const pEl4 = document.createElement('p');
 
-    const lnk = document.getElementById('link');
-    const aText = document.createTextNode('New link node');
-    const aEl = document.createElement('a')
+    // const lnk = document.getElementById('link');
+    // const aText = document.createTextNode('New link node');
+    // const aEl = document.createElement('a')
 
 
 
@@ -122,22 +122,80 @@
 
     //new link
 
+    const linkInput = document.querySelector('.linkinput');
+    const textInput = document.querySelector('.textinput');
+    const tempText = document.querySelector('.temptext');
+    const tempLink = document.querySelector('.templink');
+
+    textInput.addEventListener('input', letter =>{
+        tempText.textContent = letter.target.value;
+        
+   }) 
+
+   linkInput.addEventListener('input', letter =>{
+    tempLink.textContent = letter.target.value;
+    
+}) 
+
     btnnewlinknode.addEventListener('click', (ev) =>{
 
 
       // pEl.appendChild(pText);
       // domcontent.appendChild(pEl);
+    //   const linkInput = document.querySelector('.linkinput');
+    //   const textInput = document.querySelector('.textinput');
+    //   const tempText = document.querySelector('.temptext');
+
+    //   const storageTextInput = document.querySelector('.storagetextinput');  
+
+        if(tempLink.textContent === ''){
+            linkInput.classList.add('linkempty')
+            // storageTextInput.textContent = storedInput.toUpperCase();
+        }
+        if(tempText.textContent === ''){
+            textInput.classList.add('textempty')
+            // storageTextInput.textContent = storedInput.toUpperCase();
+        }
+
+        if(tempLink.textContent && tempText.textContent){
+            
+        // const lnk = document.getElementById('link');
+        const aText = document.createTextNode(tempText.textContent);
+        const aEl = document.createElement('a')
       
-        aEl.setAttribute('href','#newlink');
+
+        // aEl.setAttribute('href','#newlink');
+        aEl.setAttribute('href', tempLink.textContent);
         aEl.setAttribute('class','link');
+        aEl.setAttribute('target','_blank');
         aEl.appendChild(aText);
         pEl.appendChild(aEl);
         // domcontent.appendChild(aEl);
-        domcontent.appendChild(pEl);
-        // domcontent.insertBefore(aEl, firstP);
-      
 
-        console.log('new link: ', aEl.outerHTML, domcontent.outerHTML);
+        
+            domcontent.appendChild(pEl);
+            // domcontent.insertBefore(aEl, firstP);
+
+            // const linkInput = document.querySelector('.linkinput');
+            // const textInput = document.querySelector('.textinput');
+
+            textInput.innerHTML = '';
+            document.querySelector('.textinput').value = '';
+
+            linkInput.innerHTML = '';
+            document.querySelector('.linkinput').value = '';
+
+            console.log(textInput)
+           
+           
+            tempLink.textContent = '';
+            tempText.textContent = '';
+            linkInput.classList.remove('linkempty')
+            textInput.classList.remove('textempty')
+        }
+
+        // console.log('new link: ', aEl.outerHTML, domcontent.outerHTML);
+        console.log('new link: ', domcontent.outerHTML);
         
     })
 
