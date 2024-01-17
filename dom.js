@@ -18,6 +18,7 @@
 
     // const firstP = domcontent.children[ 1 ];
     const firstP = domcontent.children[ domcontent.childElementCount - 2 ];
+    // let count = 1;
     const pText2 = document.createTextNode('Node before');
     const pEl2 = document.createElement('p');
 
@@ -25,7 +26,7 @@
     const pText3 = document.createTextNode('Node after');
     const pEl3 = document.createElement('p');
 
-    const pText4 = document.createTextNode('New replaced node');
+    const pText4 = document.createTextNode('New target node');
     const pEl4 = document.createElement('p');
 
     const lnk = document.getElementById('link');
@@ -66,8 +67,11 @@
 
         pEl2.setAttribute('class','inserted');
         // aEl.appendChild(aText);
-
+        // let count = 1
+        // const pText2 = document.createTextNode('Node before');
+        // pText2Count = document.createTextNode('Node before ', count++);
         pEl2.appendChild(pText2);
+        // pEl2.appendChild(pText2);
         const inserttarget = document.querySelector('.target');
 
         console.log(inserttarget.outerHTML)
@@ -105,10 +109,12 @@
     btnreplacenode.addEventListener('click', (ev) =>{
 
         // pEl4.setAttribute('class','target');
-        pEl4.setAttribute('class','target inserted');
+        pEl4.setAttribute('class','target inserted replaced');
         pEl4.appendChild(pText4);
+        const replacedtarget = document.querySelector('.target');
         // domcontent.replaceChild(pEl4, firstP);
-        domcontent.replaceChild(pEl4, target);
+        // domcontent.replaceChild(pEl4, target);
+        domcontent.replaceChild(pEl4, replacedtarget);
         console.log('replace node: ' , domcontent.outerHTML);
         // lnk.outerHTML, 
         
