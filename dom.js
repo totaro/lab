@@ -1,7 +1,4 @@
 
-
-
-
     //  dom node modifications ------------------------------
 
     let btncreatenode = document.getElementById('btn-createnode');
@@ -15,10 +12,8 @@
     const target = document.querySelector('.target');
     const pText = document.createTextNode('New Node ');
     const pEl = document.createElement('p');
-
-    // const firstP = domcontent.children[ 1 ];
     const firstP = domcontent.children[ domcontent.childElementCount - 2 ];
-    // let count = 1;
+    
     const pText2 = document.createTextNode('Node before');
     const pEl2 = document.createElement('p');
 
@@ -29,12 +24,6 @@
     const pText4 = document.createTextNode('New target node');
     const pEl4 = document.createElement('p');
 
-    // const lnk = document.getElementById('link');
-    // const aText = document.createTextNode('New link node');
-    // const aEl = document.createElement('a')
-
-
-
     const divEl = document.createElement('div');
     const docFrag = document.createDocumentFragment();
     const fpText = document.createTextNode('Fragment node 1');
@@ -42,19 +31,7 @@
     const fpText2 = document.createTextNode('Fragment node 2');
     const fpEl2 = document.createElement('p');
 
-    // console.log('Count ', domcontent.childElementCount, 'PrevEl', domcontent.previousElementSibling , 'NextEl', domcontent.nextElementSibling, 'PrevNode', lnk.previousSibling, 'NextNode', lnk.nextSibling, 'ChildNodes link', domcontent.childNodes[3].childNodes[1]);
-
-    // console.log('ParentNode',domcontent.parentNode, 'ParentNode ParentNode ParentNode', domcontent.parentNode.parentNode.parentNode, 'Parentel Parentel', domcontent.parentElement.parentElement)
-
-    const linkki = domcontent.childNodes[3].childNodes[1];
-
-    // importlink.innerHTML = linkki;
-
-    // console.log(linkki)
-
-    console.log('before: ' , target.outerHTML, secondP.outerHTML,' | ',domcontent.outerHTML);
-    
-    // create new node --------------------------------------
+     // create new node --------------------------------------
 
     btncreatenode.addEventListener('click', (ev) =>{
         
@@ -68,12 +45,7 @@
     btninsertenode.addEventListener('click', (ev) =>{
 
         pEl2.setAttribute('class','inserted');
-        // aEl.appendChild(aText);
-        // let count = 1
-        // const pText2 = document.createTextNode('Node before');
-        // pText2Count = document.createTextNode('Node before ', count++);
         pEl2.appendChild(pText2);
-        // pEl2.appendChild(pText2);
         const inserttarget = document.querySelector('.target');
 
         console.log(inserttarget.outerHTML)
@@ -82,14 +54,7 @@
             domcontent.insertBefore(pEl2, inserttarget);
             console.log('after insert before: ' , domcontent.outerHTML);
         }
-        // if(pEl2.classList.contains('inserted')){
-        //     domcontent.insertBefore(pEl2, target);
-        //     console.log('after insert before: ' , domcontent.outerHTML);
-        // }
-
-
-        // domcontent.insertBefore(pEl2, firstP);
-        // console.log('after insert before: ' , domcontent.outerHTML);
+        
     })
 
     // insert after node ----------------------------------------------
@@ -98,28 +63,18 @@
 
         pEl3.appendChild(pText3);
         const inserttarget = document.querySelector('.target');
-
-        console.log(inserttarget.outerHTML)
-
         domcontent.insertBefore(pEl3, inserttarget.nextSibling);
-        // domcontent.insertBefore(pEl3, firstP.nextSibling);
-        console.log('after insert after: ' , domcontent.outerHTML);
     })
 
     //replace target node --------------------------------------------
 
     btnreplacenode.addEventListener('click', (ev) =>{
-
-        // pEl4.setAttribute('class','target');
+      
         pEl4.setAttribute('class','target inserted replaced');
         pEl4.appendChild(pText4);
         const replacedtarget = document.querySelector('.target');
-        // domcontent.replaceChild(pEl4, firstP);
-        // domcontent.replaceChild(pEl4, target);
         domcontent.replaceChild(pEl4, replacedtarget);
-        console.log('replace node: ' , domcontent.outerHTML);
-        // lnk.outerHTML, 
-        
+            
     })
 
     //new link -------------------------------------------------------
@@ -143,24 +98,7 @@
 
     btnnewlinknode.addEventListener('click', (ev) =>{
 
-        console.log('pt',tempText.textContent)
-        console.log('pl', tempLink.textContent)
-
-
-      // pEl.appendChild(pText);
-      // domcontent.appendChild(pEl);
-    //   const linkInput = document.querySelector('.linkinput');
-    //   const textInput = document.querySelector('.textinput');
-    //   const tempText = document.querySelector('.temptext');
-
-    //   const storageTextInput = document.querySelector('.storagetextinput');  
-
-    // const linkInput = document.querySelector('.linkinput').value;    
-    // const textInput = document.querySelector('.textinput').value;
-        
-    // console.log('linkin',linkInput)
-        
-        
+       
         if(tempText.textContent === ''){
             textInput.classList.add('textempty')
 
@@ -173,8 +111,7 @@
 
         if(tempLink.textContent === ''){
             linkInput.classList.add('linkempty')
-            // console.log('linkin',linkInput)
-
+            
             if(tempText.textContent){
                 console.log('linkin2 ',tempText.textContent)
                 textInput.classList.remove('textempty')
@@ -185,82 +122,36 @@
 
         if(tempLink.textContent && tempText.textContent){
             
-        // const lnk = document.getElementById('link');
         const link = document.querySelector('.link');
         const aText = document.createTextNode(tempText.textContent);
-        const aEl = document.createElement('a')
+        const aEl = document.createElement('a');
 
-        // console.log('before',link);
-      
-
-        // aEl.setAttribute('href','#newlink');
         aEl.setAttribute('href', tempLink.textContent);
         aEl.setAttribute('class','link');
         aEl.setAttribute('target','_blank');
         aEl.appendChild(aText);
-        // pEl.setAttribute('class','plink');
-        // pEl.appendChild(aEl);
-        // domcontent.appendChild(aEl);
+       
         const replacedlink = document.querySelector('.plink');
-        console.log('repla', replacedlink)
-
+        
             if(replacedlink){
 
-                // const firstLink = document.querySelector('.firstlink');
-                // console.log('befor',firstLink)
-                // firstLink.remove();
-                // console.log('after ',firstLink)
-
-                // document.querySelector('.firstlink').remove();
-
-                const pLinks = document.querySelectorAll('.plink');
-
-                    pLinks.forEach(plink => {
+               const pLinks = document.querySelectorAll('.plink');
+                pLinks.forEach(plink => {
                         plink.remove();
                 });
 
-                // const pText4 = document.createTextNode('New target node');
                 const linkEl2 = document.createElement('p');
 
-                console.log('remove')
                 linkEl2.setAttribute('class','plink');
                 linkEl2.appendChild(aEl);
                 domcontent.appendChild(linkEl2);
-
-                // const plinks = document.querySelectorAll('.plink');
-
-                //     plinks.forEach(plink => {
-                //     plink.remove();
-                // });
-
-                // console.log(plinks);
-
-
-                //---- const pText5 = document.createTextNode('New target node');
-                // const pEl5 = document.createElement('p');
-                // pEl5.setAttribute('class','plink');
-                // pEl5.appendChild(aEl);
-                // // //---- pEl.appendChild(aEl);
-                // pEl.appendChild(pEl5);
-                // // // ---domcontent.insertBefore(pEl, replacedlink);
-                // // // ----domcontent.replaceChild(pEl,replacedlink);
-                // domcontent.appendChild(pEl);
-                // console.log('link on',replacedlink)
+                
             }else {
                 const linkEl = document.createElement('p');
                 linkEl.setAttribute('class','plink');
                 linkEl.appendChild(aEl);
                 domcontent.appendChild(linkEl);
-                console.log('no link',replacedlink)
             }
-
-            // console.log('after',link)
-            // domcontent.replaceChild(pEl, link);
-
-            // domcontent.insertBefore(aEl, firstP);
-
-            // const linkInput = document.querySelector('.linkinput');
-            // const textInput = document.querySelector('.textinput');
 
             textInput.innerHTML = '';
             document.querySelector('.textinput').value = '';
@@ -268,17 +159,13 @@
             linkInput.innerHTML = '';
             document.querySelector('.linkinput').value = '';
 
-            console.log(textInput)
-           
-           
             tempLink.textContent = '';
             tempText.textContent = '';
             linkInput.classList.remove('linkempty')
             textInput.classList.remove('textempty')
         }
 
-        // console.log('new link: ', aEl.outerHTML, domcontent.outerHTML);
-        console.log('new link: ', domcontent.outerHTML);
+       
         
     })
 
@@ -294,6 +181,5 @@
 
         divEl.appendChild(docFrag);
         domcontent.appendChild(divEl);
-        // domcontent.insertBefore(divEl, firstP);
-        console.log('div fragment: ' , domcontent.outerHTML);
+       
     })

@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>Totaro - Lab</title>
+    <title>Totaro - The Lab</title>
 </head>
 <body>
-
-    <header id="header">
+     <header id="header">
         <div class="navbar">
             <div class="logo"><a href="https://totaro.github.io/">Totaro</a></div>
             <ul class="links">
@@ -22,7 +21,6 @@
                 <li><a href="https://totaro.github.io/digitalclock/">Digital Clock</a></li>
                 <li><a href="https://totaro.github.io/reactbase/">Todo List</a></li>
             </ul>
-            <!--<a href="#" class="action_btn">Contact Me!</a>-->
             <div class="toggle_btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
@@ -37,38 +35,69 @@
             <li><a href="https://totaro.github.io/randomphotogallery/">Photo Gallery</a></li>
             <li><a href="https://totaro.github.io/digitalclock/">Digital Clock</a></li>
             <li><a href="https://totaro.github.io/reactbase/">Todo List</a></li>
-            <!--<li><a href="#" class="action_btn">Contact Me!</a></li>-->
-
-
+           
         </div>
     </header>
+ 
+    <main class="main"><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with html/css/javascript. First ones are Drag & Drop and Dom Nodes.</div></div>
+    </section></main>
 
-    <main><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with html/css/javascript. First one is Drag and Drop.</div></div>
-    <div class="container">
-        <h1 class="heading">
-            
-            <div class="drop-row" style="margin-bottom: 1rem;">
-                <div>Drag and Drop</div>
-                <div><h6>(Mouse Events)</h6></div>
-            </div>
-                
-           
+<div class="wrapper">
+<div class="container">
+    <h1 class="heading">
+      <div class="drop-row" style="margin-bottom: 1rem;">
+            <div>Drag & Drop</div>
+            <div><h6>(Mouse Events)</h6></div>
+        </div>
+  <div id="drag-and-drop">
+        <div class="draggable items">
+          <div class="draggable item move" draggable="true"><i class="fa-solid fa-grip-vertical"></i>&nbsp;Move Me!</div>
+          <div class="draggable item copy" draggable="true"><i class="fa-solid fa-grip-vertical"></i>&nbsp;Copy Me!</div>
+        </div>
+        <div class="droppable">
+          <div class="drop-row"><div><h3>Drop Here</h3></div> <div><button class="clear">Clear</button></div></div>
+        </div>
         
-        <div id="drag-and-drop">
-            <div class="draggable items">
-              <div class="draggable item move" draggable="true"><i class="fa-solid fa-grip-vertical"></i>&nbsp;Move Me!</div>
-              <div class="draggable item copy" draggable="true"><i class="fa-solid fa-grip-vertical"></i>&nbsp;Copy Me!</div>
-            </div>
-            <div class="droppable">
-              <div class="drop-row"><div><h3>Drop Here</h3></div> <div><button class="clear">Clear</button></div></div>
-            </div>
-            
-          </div>
+      </div>
 
-    </div>
-</section></main>
+</div>
 
-    <script src="index.js"></script>
-    
+<div class="container">
+    <h1 class="heading">
+       <div class="dom-row" style="margin-bottom: 1rem;">
+            <div>Dom Nodes</div>
+            <div><h6></h6></div>
+        </div>
+   <div id="dom-node">
+        <div class="buttons">
+            <div style="padding:10px;">
+                <button id="btn-createnode" class="nodebutton">Create node</button>
+                <button id="btn-insertnode" class="nodebutton">Insert node before</button>
+                <button id="btn-insertafternode" class="nodebutton">Insert node after</button>
+                <button id="btn-replacenode" class="nodebutton">Replace node</button>
+                 <input type="text" placeholder="Insert link" class="linkinput">
+                <input type="text" placeholder="Insert linktext" class="textinput">
+                <p class="templink hide"></p><p class="temptext hide"></p>
+                <button id="btn-newlink" class="nodebutton">New link node</button>
+                <button id="btn-fragment" class="nodebutton">New node fragment</button>
+                
+                </div>
+        </div>
+        <div class="nodes">
+          <div class="domcontent post">
+            <p>Node 1</p>
+                <p class="target inserted">Target Node 2</p>
+                <p>Node 3</p>
+                
+            </div>
+        </div>
+        
+      </div>
+
+</div>
+<!-- wrapper -->
+</div>
+  <script src="index.js"></script>
+    <script src="dom.js"></script>
 </body>
 </html>
