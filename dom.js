@@ -183,33 +183,50 @@
             if(replacedlink){
 
                 // const firstLink = document.querySelector('.firstlink');
+                // console.log('befor',firstLink)
                 // firstLink.remove();
+                // console.log('after ',firstLink)
 
-                document.querySelector('.firstlink').remove();
+                // document.querySelector('.firstlink').remove();
 
-                const plinks = document.querySelectorAll('.plink');
+                const pLinks = document.querySelectorAll('.plink');
 
-                    plinks.forEach(plink => {
-                    plink.remove();
+                    pLinks.forEach(plink => {
+                        plink.remove();
                 });
 
-                console.log(plinks);
+                // const pText4 = document.createTextNode('New target node');
+                const pEl8 = document.createElement('p');
+
+                console.log('remove')
+                pEl8.setAttribute('class','plink');
+                pEl8.appendChild(aEl);
+                domcontent.appendChild(pEl8);
+
+                // const plinks = document.querySelectorAll('.plink');
+
+                //     plinks.forEach(plink => {
+                //     plink.remove();
+                // });
+
+                // console.log(plinks);
 
 
-                // const pText5 = document.createTextNode('New target node');
-                const pEl5 = document.createElement('p');
-                pEl5.setAttribute('class','plink');
-                pEl5.appendChild(aEl);
-                // pEl.appendChild(aEl);
-                pEl.appendChild(pEl5);
-                // domcontent.insertBefore(pEl, replacedlink);
-                // domcontent.replaceChild(pEl,replacedlink);
-                domcontent.appendChild(pEl);
-                console.log('link on',replacedlink)
+                //---- const pText5 = document.createTextNode('New target node');
+                // const pEl5 = document.createElement('p');
+                // pEl5.setAttribute('class','plink');
+                // pEl5.appendChild(aEl);
+                // // //---- pEl.appendChild(aEl);
+                // pEl.appendChild(pEl5);
+                // // // ---domcontent.insertBefore(pEl, replacedlink);
+                // // // ----domcontent.replaceChild(pEl,replacedlink);
+                // domcontent.appendChild(pEl);
+                // console.log('link on',replacedlink)
             }else {
-                pEl.setAttribute('class','plink firstlink');
-                pEl.appendChild(aEl);
-                domcontent.appendChild(pEl);
+                const linkEl = document.createElement('p');
+                linkEl.setAttribute('class','plink');
+                linkEl.appendChild(aEl);
+                domcontent.appendChild(linkEl);
                 console.log('no link',replacedlink)
             }
 
