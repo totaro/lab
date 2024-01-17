@@ -196,12 +196,12 @@
                 });
 
                 // const pText4 = document.createTextNode('New target node');
-                const pEl8 = document.createElement('p');
+                const linkEl2 = document.createElement('p');
 
                 console.log('remove')
-                pEl8.setAttribute('class','plink');
-                pEl8.appendChild(aEl);
-                domcontent.appendChild(pEl8);
+                linkEl2.setAttribute('class','plink');
+                linkEl2.appendChild(aEl);
+                domcontent.appendChild(linkEl2);
 
                 // const plinks = document.querySelectorAll('.plink');
 
