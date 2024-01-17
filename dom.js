@@ -35,9 +35,9 @@
 
     const divEl = document.createElement('div');
     const docFrag = document.createDocumentFragment();
-    const fpText = document.createTextNode('Fragment paragraph ONE');
+    const fpText = document.createTextNode('Fragment node 1');
     const fpEl = document.createElement('p');
-    const fpText2 = document.createTextNode('Fragment paragraph TWO');
+    const fpText2 = document.createTextNode('Fragment node 2');
     const fpEl2 = document.createElement('p');
 
     // console.log('Count ', domcontent.childElementCount, 'PrevEl', domcontent.previousElementSibling , 'NextEl', domcontent.nextElementSibling, 'PrevNode', lnk.previousSibling, 'NextNode', lnk.nextSibling, 'ChildNodes link', domcontent.childNodes[3].childNodes[1]);
@@ -51,6 +51,7 @@
     // console.log(linkki)
 
     console.log('before: ' , domcontent.outerHTML);
+    
     btncreatenode.addEventListener('click', (ev) =>{
         
         pEl.appendChild(pText);
