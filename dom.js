@@ -139,7 +139,12 @@
     
 }) 
 
+    
+
     btnnewlinknode.addEventListener('click', (ev) =>{
+
+        console.log('pt',tempText.textContent)
+        console.log('pl', tempLink.textContent)
 
 
       // pEl.appendChild(pText);
@@ -150,13 +155,32 @@
 
     //   const storageTextInput = document.querySelector('.storagetextinput');  
 
-        if(tempLink.textContent === ''){
-            linkInput.classList.add('linkempty')
-            // storageTextInput.textContent = storedInput.toUpperCase();
-        }
+    // const linkInput = document.querySelector('.linkinput').value;    
+    // const textInput = document.querySelector('.textinput').value;
+        
+    // console.log('linkin',linkInput)
+        
+        
         if(tempText.textContent === ''){
             textInput.classList.add('textempty')
-            // storageTextInput.textContent = storedInput.toUpperCase();
+
+            if(tempLink.textContent){
+                console.log('linkin3 ',tempLink.textContent)
+                linkInput.classList.remove('linkempty')
+            }
+            
+        }
+
+        if(tempLink.textContent === ''){
+            linkInput.classList.add('linkempty')
+            // console.log('linkin',linkInput)
+
+            if(tempText.textContent){
+                console.log('linkin2 ',tempText.textContent)
+                textInput.classList.remove('textempty')
+            }
+            
+            
         }
 
         if(tempLink.textContent && tempText.textContent){
