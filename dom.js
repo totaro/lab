@@ -181,16 +181,33 @@
         console.log('repla', replacedlink)
 
             if(replacedlink){
-                const pText5 = document.createTextNode('New target node');
+
+                // const firstLink = document.querySelector('.firstlink');
+                // firstLink.remove();
+
+                document.querySelector('.firstlink').remove();
+
+                const plinks = document.querySelectorAll('.plink');
+
+                    plinks.forEach(plink => {
+                    plink.remove();
+                });
+
+                console.log(plinks);
+
+
+                // const pText5 = document.createTextNode('New target node');
                 const pEl5 = document.createElement('p');
+                pEl5.setAttribute('class','plink');
                 pEl5.appendChild(aEl);
                 // pEl.appendChild(aEl);
                 pEl.appendChild(pEl5);
-                domcontent.insertBefore(pEl, replacedlink);
+                // domcontent.insertBefore(pEl, replacedlink);
                 // domcontent.replaceChild(pEl,replacedlink);
+                domcontent.appendChild(pEl);
                 console.log('link on',replacedlink)
             }else {
-                pEl.setAttribute('class','plink');
+                pEl.setAttribute('class','plink firstlink');
                 pEl.appendChild(aEl);
                 domcontent.appendChild(pEl);
                 console.log('no link',replacedlink)
