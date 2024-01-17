@@ -54,6 +54,8 @@
 
     console.log('before: ' , target.outerHTML, secondP.outerHTML,' | ',domcontent.outerHTML);
     
+    // create new node --------------------------------------
+
     btncreatenode.addEventListener('click', (ev) =>{
         
         pEl.appendChild(pText);
@@ -61,7 +63,7 @@
         console.log('after: ' , domcontent.outerHTML);
     })
 
-    // insert before node
+    // insert before node -------------------------------------
 
     btninsertenode.addEventListener('click', (ev) =>{
 
@@ -90,7 +92,7 @@
         // console.log('after insert before: ' , domcontent.outerHTML);
     })
 
-    // insert after node
+    // insert after node ----------------------------------------------
 
     btninsertafterenode.addEventListener('click', (ev) =>{
 
@@ -104,7 +106,7 @@
         console.log('after insert after: ' , domcontent.outerHTML);
     })
 
-    //replace target node
+    //replace target node --------------------------------------------
 
     btnreplacenode.addEventListener('click', (ev) =>{
 
@@ -120,7 +122,7 @@
         
     })
 
-    //new link
+    //new link -------------------------------------------------------
 
     const linkInput = document.querySelector('.linkinput');
     const textInput = document.querySelector('.textinput');
@@ -160,8 +162,11 @@
         if(tempLink.textContent && tempText.textContent){
             
         // const lnk = document.getElementById('link');
+        const link = document.querySelector('.link');
         const aText = document.createTextNode(tempText.textContent);
         const aEl = document.createElement('a')
+
+        console.log('before',link);
       
 
         // aEl.setAttribute('href','#newlink');
@@ -172,8 +177,17 @@
         pEl.appendChild(aEl);
         // domcontent.appendChild(aEl);
 
-        
-            domcontent.appendChild(pEl);
+            if(link){
+                domcontent.replaceChild(pEl, link);
+                console.log('link on',link)
+            }else {
+                domcontent.appendChild(pEl);
+                console.log('no link',link)
+            }
+
+            console.log('after',link)
+            // domcontent.replaceChild(pEl, link);
+
             // domcontent.insertBefore(aEl, firstP);
 
             // const linkInput = document.querySelector('.linkinput');
@@ -199,7 +213,7 @@
         
     })
 
-    // fragment
+    // fragment ----------------------------------------------------
 
     btncreatefragment.addEventListener('click', (ev) =>{
         
