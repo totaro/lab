@@ -12,6 +12,7 @@
     let btncreatefragment = document.getElementById('btn-fragment');
 
     const domcontent = document.querySelector('.domcontent');
+    const target = document.querySelector('.target');
     const pText = document.createTextNode('New Node ');
     const pEl = document.createElement('p');
 
@@ -50,7 +51,7 @@
 
     // console.log(linkki)
 
-    console.log('before: ' , domcontent.outerHTML);
+    console.log('before: ' , target.outerHTML, secondP.outerHTML,' | ',domcontent.outerHTML);
     
     btncreatenode.addEventListener('click', (ev) =>{
         
@@ -63,9 +64,26 @@
 
     btninsertenode.addEventListener('click', (ev) =>{
 
+        pEl2.setAttribute('class','inserted');
+        // aEl.appendChild(aText);
+
         pEl2.appendChild(pText2);
-        domcontent.insertBefore(pEl2, firstP);
-        console.log('after insert before: ' , domcontent.outerHTML);
+        const inserttarget = document.querySelector('.target');
+
+        console.log(inserttarget.outerHTML)
+        
+        if(inserttarget.classList.contains('target')){
+            domcontent.insertBefore(pEl2, inserttarget);
+            console.log('after insert before: ' , domcontent.outerHTML);
+        }
+        // if(pEl2.classList.contains('inserted')){
+        //     domcontent.insertBefore(pEl2, target);
+        //     console.log('after insert before: ' , domcontent.outerHTML);
+        // }
+
+
+        // domcontent.insertBefore(pEl2, firstP);
+        // console.log('after insert before: ' , domcontent.outerHTML);
     })
 
     // insert after node
@@ -73,17 +91,26 @@
     btninsertafterenode.addEventListener('click', (ev) =>{
 
         pEl3.appendChild(pText3);
-        domcontent.insertBefore(pEl3, firstP.nextSibling);
+        const inserttarget = document.querySelector('.target');
+
+        console.log(inserttarget.outerHTML)
+
+        domcontent.insertBefore(pEl3, inserttarget.nextSibling);
+        // domcontent.insertBefore(pEl3, firstP.nextSibling);
         console.log('after insert after: ' , domcontent.outerHTML);
     })
 
-    //replace child node
+    //replace target node
 
     btnreplacenode.addEventListener('click', (ev) =>{
 
+        // pEl4.setAttribute('class','target');
+        pEl4.setAttribute('class','target inserted');
         pEl4.appendChild(pText4);
-        domcontent.replaceChild(pEl4, firstP);
-        console.log('replace node: ' ,  lnk.outerHTML, domcontent.outerHTML);
+        // domcontent.replaceChild(pEl4, firstP);
+        domcontent.replaceChild(pEl4, target);
+        console.log('replace node: ' , domcontent.outerHTML);
+        // lnk.outerHTML, 
         
     })
 
@@ -96,12 +123,15 @@
       // domcontent.appendChild(pEl);
       
         aEl.setAttribute('href','#newlink');
+        aEl.setAttribute('class','link');
         aEl.appendChild(aText);
-        domcontent.appendChild(aEl);
+        pEl.appendChild(aEl);
+        // domcontent.appendChild(aEl);
+        domcontent.appendChild(pEl);
         // domcontent.insertBefore(aEl, firstP);
       
 
-        console.log('replace linknode: ', lnk.outerHTML, domcontent.outerHTML);
+        console.log('new link: ', aEl.outerHTML, domcontent.outerHTML);
         
     })
 
