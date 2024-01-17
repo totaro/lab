@@ -166,7 +166,7 @@
         const aText = document.createTextNode(tempText.textContent);
         const aEl = document.createElement('a')
 
-        console.log('before',link);
+        // console.log('before',link);
       
 
         // aEl.setAttribute('href','#newlink');
@@ -174,18 +174,29 @@
         aEl.setAttribute('class','link');
         aEl.setAttribute('target','_blank');
         aEl.appendChild(aText);
-        pEl.appendChild(aEl);
+        // pEl.setAttribute('class','plink');
+        // pEl.appendChild(aEl);
         // domcontent.appendChild(aEl);
+        const replacedlink = document.querySelector('.plink');
+        console.log('repla', replacedlink)
 
-            if(link){
-                domcontent.replaceChild(pEl, link);
-                console.log('link on',link)
+            if(replacedlink){
+                const pText5 = document.createTextNode('New target node');
+                const pEl5 = document.createElement('p');
+                pEl5.appendChild(aEl);
+                // pEl.appendChild(aEl);
+                pEl.appendChild(pEl5);
+                domcontent.insertBefore(pEl, replacedlink);
+                // domcontent.replaceChild(pEl,replacedlink);
+                console.log('link on',replacedlink)
             }else {
+                pEl.setAttribute('class','plink');
+                pEl.appendChild(aEl);
                 domcontent.appendChild(pEl);
-                console.log('no link',link)
+                console.log('no link',replacedlink)
             }
 
-            console.log('after',link)
+            // console.log('after',link)
             // domcontent.replaceChild(pEl, link);
 
             // domcontent.insertBefore(aEl, firstP);
