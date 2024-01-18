@@ -25,10 +25,6 @@ body{
     background-size: cover;
     background-position: center;
 }
-
-
-
-
 li{
     list-style: none;
     text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
@@ -53,17 +49,17 @@ a:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    margin-bottom: 10px;
+   
   }
   
   .sticky + .contentX {
     padding-top: 60px;
   }
 
-  .sticky + .main + #hero{
+  /* .sticky + .main + #hero{
     padding-top: 0px;
     margin-bottom: 0px
-  }
+  } */
 
 /* Header */
 
@@ -75,40 +71,52 @@ a:hover {
     flex-direction: column;
     /* border: 1px solid white; */
     padding: 0rem 2rem;
-    padding-top:1rem;
+    padding-top:0rem;
+    padding-bottom: 2rem;
     /* padding-top:1rem */
 
 }
 
-/* #header::after{
-    height:20px;
-
+.container{
+  /* margin-botton: 20px; */
+  padding: 25px;
+  width: 100%;
+  max-width: 650px;
+  background-color: rgba(61, 36, 35, 0.8);
+  border-radius: 7px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color:white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+ 
 }
 
-header.child{
-
-    background-color: #02ADDB;
-} */
-
-#header {
+header {
     position: relative;
     padding: 0 2rem;
     background: rgb(255, 255, 255, .1);
     backdrop-filter: blur(15px);
     z-index: 9999;
-    
-    
+
+}
+
+#header{
+  margin-bottom: 10px;
+
+}
+.top{
+  border: 1px solid #422E27;
 }
 .main {
     display: flex;
-	align-items: center;
-	justify-content: center;
-    
+	  align-items: center;
+	  justify-content: center;
     flex-direction: column;
-    /* border:1px solid green; */
-    /* margin-top:120px;
-    top:200px;
-    padding-block: 2rem; */
+    
 }
 
 .contents{
@@ -122,11 +130,6 @@ header.child{
    
 
 
-}
-#header{
-    /* top:0; */
-    /* border:1px solid white; */
-    /* margin-bottom:120px */
 }
 
 .navbar {
@@ -224,29 +227,21 @@ header.child{
 }
 
 /* Hero */
-.top {
-     margin-bottom:50px; 
-    top:0px;
-    border: 1px solid green;
-}
+
 
 section#hero{
 
     /* height: calc(80vh - 120px); */
-    /* top:100px; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    /* padding: 2rem; */
     padding-left:2rem;
     padding-right:2rem;
     padding-top:1rem;
     
-    /* margin-bottom: 10px; */
-
 }
 #hero h1 {
     font-size: 1rem;
@@ -294,25 +289,6 @@ section#hero{
         }
     }
 
-
-    
-
-.container{
-    margin: 20px;
-    padding: 25px;
-    width: 100%;
-    max-width: 650px;
-    background-color: rgba(61, 36, 35, 0.8);
-    border-radius: 7px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    color:white;
-    margin-top: 10px;
-    
-   
-}
 
 .labheader{
     margin: 0px;
