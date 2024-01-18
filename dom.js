@@ -90,15 +90,20 @@
    }) 
 
    linkInput.addEventListener('input', letter =>{
-    tempLink.textContent = letter.target.value;
+        tempLink.textContent = letter.target.value;
     
-}) 
-
-    
+    }) 
 
     btnnewlinknode.addEventListener('click', (ev) =>{
 
-       
+      
+        const incHttp = tempLink.textContent.toLowerCase().startsWith("http://");
+        const incHttps = tempLink.textContent.toLowerCase().startsWith("https://");
+
+        if(!incHttp && !incHttps){
+               tempLink.textContent = 'http://' + tempLink.textContent;
+            }
+
         if(tempText.textContent === ''){
             textInput.classList.add('textempty')
 
