@@ -96,18 +96,11 @@
 
     btnnewlinknode.addEventListener('click', (ev) =>{
 
-      
-        const incHttp = tempLink.textContent.toLowerCase().startsWith("http://");
-        const incHttps = tempLink.textContent.toLowerCase().startsWith("https://");
-
-        if(!incHttp && !incHttps){
-               tempLink.textContent = 'http://' + tempLink.textContent;
-            }
-
         if(tempText.textContent === ''){
             textInput.classList.add('textempty')
 
             if(tempLink.textContent){
+                
                 console.log('linkin3 ',tempLink.textContent)
                 linkInput.classList.remove('linkempty')
             }
@@ -126,6 +119,13 @@
         }
 
         if(tempLink.textContent && tempText.textContent){
+        
+        const incHttp = tempLink.textContent.toLowerCase().startsWith("http://");
+        const incHttps = tempLink.textContent.toLowerCase().startsWith("https://");
+        
+        if(!incHttp && !incHttps){
+            tempLink.textContent = 'http://' + tempLink.textContent;
+            }   
             
         const link = document.querySelector('.link');
         const aText = document.createTextNode(tempText.textContent);
