@@ -103,9 +103,17 @@ getStorage.addEventListener('click', () =>{
     if(!localStorage.getItem('storage')){
 
         console.log('ei ole dataa')
+        document.querySelector('.resultfound').classList.remove('hide')
+        document.querySelector('.datafound').innerHTML = 'No data on Local storage';
     }
 
-    let localData = JSON.parse(localStorage.getItem('storage'));
+    if(localStorage.getItem('storage')){
+
+        console.log('dataa on')
+        document.querySelector('.resultfound').classList.add('hide')
+        document.querySelector('.datafound').innerHTML = '';
+
+        let localData = JSON.parse(localStorage.getItem('storage'));
     // let localData3 = JSON.parse(localStorage.getItem('storage'));
     storagedData.innerHTML = localData.data;
 
@@ -114,8 +122,19 @@ getStorage.addEventListener('click', () =>{
     // console.log('aik2', aika.toLocaleString())
 
     storagedTimestamp.innerHTML = toTime.toLocaleString();
+        
+    }
 
-    // storagedTimestamp.innerHTML = localData2.timestamp;
+    // let localData = JSON.parse(localStorage.getItem('storage'));
+    
+    // storagedData.innerHTML = localData.data;
+
+    // let toTime = new Date(parseInt(localData.timestamp));
+   
+
+    // storagedTimestamp.innerHTML = toTime.toLocaleString();
+
+    
     
     
     
