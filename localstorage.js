@@ -46,6 +46,8 @@ saveStorage.addEventListener('click', () =>{
     };
     localStorage.setItem('storage', JSON.stringify(storage));
     document.querySelector('.storageinput').value = '';
+    document.querySelector('.storagesaved').classList.remove('hide')
+    document.querySelector('.storagesaved').innerHTML = 'Saved!';
     
 
 })
@@ -71,6 +73,9 @@ getStorage.addEventListener('click', () =>{
         storagedData.innerHTML = localData.data;
         let toTime = new Date(parseInt(localData.timestamp));
         storagedTimestamp.innerHTML = toTime.toLocaleString();
+
+        document.querySelector('.storagesaved').classList.add('hide')
+        document.querySelector('.storagesaved').innerHTML = '';
         
     }
 })

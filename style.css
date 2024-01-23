@@ -467,6 +467,11 @@ input:focus{
     min-height: 200px;
     width: 45%;
   }
+  .storagesave{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px  solid white; */
+  }
 
   .nodes {
     border: 2px white solid;
@@ -509,7 +514,7 @@ input:focus{
     padding-bottom: 2px;
     border-radius: 5px;
     align-items: center;
-	justify-content: center;
+	  justify-content: center;
      cursor: pointer;
   }
 
@@ -571,7 +576,10 @@ input:focus{
 
     .nodebutton,
     .linkinput,
-    .textinput{
+    .textinput,
+    .savestorage,
+    .getstorage,
+    .removestorage{
         padding: 0.5rem;
         margin: 0.2rem;
         width: 8rem;
@@ -587,16 +595,12 @@ input:focus{
   }
   .storageddata,
   .storagedtimestamp{
-    /* border: 1px solid grey; */
-    /* padding:0.2rem;
-    height:2rem;
-    width:10rem; */
-    overflow: hidden;
+     overflow: hidden;
   }
 
   .result,
   .resultfound{
-    /* height: 2rem; */
+    
     padding:0.1rem;
     display: flex;
     align-items: center;
@@ -604,7 +608,31 @@ input:focus{
     gap:0.5rem;
 }
 
+.store{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+
 .datafound{
   font-size: 1rem;
   color: grey;
+}
+
+.storagesaved{
+  align-items: center;
+	justify-content: center;
+  color:white;
+  font-size: 14px;
+  font-weight: 700;
+  
+  
+}
+
+.storagetext{
+  height:20px;
+  border: 1px solid white;
+  color: red;
+  background-color: #19fc24;
 }
