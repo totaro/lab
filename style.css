@@ -459,7 +459,9 @@ input:focus{
   }
   
   .buttons,
-  .nodes {
+  .nodes,
+  .storagesave,
+  .storageget {
     
     float: left;
     min-height: 200px;
@@ -474,7 +476,8 @@ input:focus{
   }
   
     
-  .nodes {
+  .nodes,
+  .storageget {
     float: right;
     padding: 5px;
   }
@@ -493,7 +496,10 @@ input:focus{
   }
 
   .clear,
-  .nodebutton{
+  .nodebutton,
+  .savestorage,
+  .getstorage,
+  .removestorage{
     border: none;
     background-color: #02ADDB;
     color:white;
@@ -507,7 +513,10 @@ input:focus{
      cursor: pointer;
   }
 
-  .nodebutton{
+  .nodebutton,
+  .savestorage,
+  .getstorage,
+  .removestorage{
     padding: 0.5rem;
     margin: 0.2rem;
     width: 9rem;
@@ -532,7 +541,8 @@ input:focus{
   }
 
   .linkinput,
-  .textinput{
+  .textinput,
+  .storageinput{
     padding:0.2rem;
     margin: 0.2rem;
     border-radius: 5px;
@@ -569,3 +579,32 @@ input:focus{
 
   }
 
+  /* local storage ---------------------------- */
+
+  .storagecontainer{
+    display: flex;
+    gap:1rem;
+  }
+  .storageddata,
+  .storagedtimestamp{
+    /* border: 1px solid grey; */
+    /* padding:0.2rem;
+    height:2rem;
+    width:10rem; */
+    overflow: hidden;
+  }
+
+  .result,
+  .resultfound{
+    /* height: 2rem; */
+    padding:0.1rem;
+    display: flex;
+    align-items: center;
+	  justify-content: left;
+    gap:0.5rem;
+}
+
+.datafound{
+  font-size: 1rem;
+  color: grey;
+}
