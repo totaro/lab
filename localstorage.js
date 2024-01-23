@@ -44,11 +44,15 @@ saveStorage.addEventListener('click', () =>{
         timestamp: new Date().getTime()
     
     };
+
+    if(storageText.textContent){
+
     localStorage.setItem('storage', JSON.stringify(storage));
     document.querySelector('.storageinput').value = '';
+    document.querySelector('.storagetext').innerHTML = '';
     document.querySelector('.storagesaved').classList.remove('hide')
     document.querySelector('.storagesaved').innerHTML = 'Saved!';
-    
+    }
 
 })
 
@@ -90,6 +94,9 @@ removeStorage.addEventListener('click', () =>{
         document.querySelector('.datafound').innerHTML = '';
         document.querySelector('.storageddata').innerHTML = '';
         document.querySelector('.storagedtimestamp').innerHTML = '';
+
+        document.querySelector('.resultfound').classList.remove('hide')
+        document.querySelector('.datafound').innerHTML = 'Local storage data removed';
 
     
 
