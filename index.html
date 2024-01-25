@@ -9,8 +9,7 @@
     <title>Totaro - The Lab</title>
 </head>
 <body>
-
-     <div class="top"></div>
+    <div class="top"></div>
     <div><header id="header">
         <div class="navbar">
             <div class="logo"><a href="https://totaro.github.io/">Totaro</a></div>
@@ -28,7 +27,6 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
-
         <div class="dropdown_menu">
             <li><a href="https://totaro.github.io/">Home</a></li>
             <li><a href="https://totaro.github.io/lab/">The Lab</a></li>
@@ -45,18 +43,16 @@
   <div>
   </div>
   </div>
- 
-    <main class="main"><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with Html/Css/JavaScript/Htmx. Now includes Drag & Drop, Dom Nodes, Local Storage and Htmx get request.</div></div>
+     <main class="main"><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with Html/Css/JavaScript/Htmx. Now includes Drag & Drop, Dom Nodes, Local Storage and Htmx get request.</div></div>
     </section></main>
-
 <div class="wrapper">
 <div class="container">
     <h1 class="heading">
       <div class="drop-row" style="margin-bottom: 1rem;">
             <div>Drag & Drop</div>
             <div><h6>(Mouse Events)</h6></div>
-        </div></h1>
-  <div id="drag-and-drop">
+      </div></h1>
+    <div id="drag-and-drop">
         <div class="draggable items">
           <div class="draggable item move" draggable="true"><i class="fa-solid fa-grip-vertical"></i>&nbsp;Move Me!</div>
           <div class="draggable item copy" draggable="true"><i class="fa-solid fa-grip-vertical"></i>&nbsp;Copy Me!</div>
@@ -65,17 +61,15 @@
           <div class="drop-row"><div><h3>Drop Here</h3></div> <div><button class="clear">Clear</button></div></div>
         </div>
         
-      </div>
-
+    </div>
 </div>
-
 <div class="container">
     <h1 class="heading">
        <div class="dom-row" style="margin-bottom: 1rem;">
             <div>Dom Nodes</div>
             <div><h6></h6></div>
         </div></h1>
-   <div id="dom-node">
+  <div id="dom-node">
         <div class="buttons">
             <div >
                 <button id="btn-createnode" class="nodebutton">Create node</button>
@@ -87,19 +81,16 @@
                 <p class="templink hide"></p><p class="temptext hide"></p>
                 <button id="btn-newlink" class="nodebutton">New link node</button>
                 <button id="btn-fragment" class="nodebutton">New node fragment</button>
-                
-                </div>
+               </div>
         </div>
         <div class="nodes">
-          <div class="domcontent post">
-            <p>Node 1</p>
-                <p class="target inserted">Node 2: Target </p>
-                <p>Node 3</p>
-                
-            </div>
+                <div class="domcontent post">
+                  <p>Node 1</p>
+                      <p class="target inserted">Node 2: Target </p>
+                      <p>Node 3</p>
+                  </div>
         </div>
-      </div>
-
+  </div>
 </div>
 
 <div class="container">
@@ -124,12 +115,10 @@
     <div class="result"><div>Time:</div><div class="storagedtimestamp"></div></div>
     <div class="result"><div><button class="getstorage">Get Storage Data</button></div></div>
     <div class="result"><div><button class="removestorage">Remove Storage Data</button></div></div>
-    
   </div>
 </div>
 </div>
 </div>
-
 <div class="container">
   <h1 class="heading">
      <div class="dom-row" style="margin-bottom: 1rem;">
@@ -155,7 +144,7 @@
           hx-target="#htmx-target-container"
           hx-trigger="keyup delay:500ms"
           hx-indicator=".loader"
-          hx-swap="innerHTML"
+          hx-swap="innerHTML transition:true"
           name="contains"/>
     </div>
     <div class="htmx-item">

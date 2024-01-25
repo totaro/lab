@@ -658,42 +658,19 @@ label {
   display: block;
   margin-top: 20px;
 }
-/* input[type="text"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  background-color: #fff;
-} */
-
-.htmxbuttonX {
-  display: inline-block;
-  font-size: 1em;
-  padding: 10px 20px;
-  margin-top: 10px;
-  color: #fff;
-  background-color: #3498db;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
 #htmxdoms {
-    
   width: 100%;
   overflow: auto;
   display: flex;
   justify-content: center;
 }
+
 .htmx-container{
   display: flex;
   align-items: left;
   flex-direction: column;
   width:80%
-
 }
 
 .htmx-item{
@@ -701,9 +678,9 @@ display: flex;
   align-items: left;
   justify-content: left;
 }
-.htmx-input{
 
-  width: 100%;
+.htmx-input{
+ width: 100%;
   padding: 8px 20px;
   margin-top: 15px;
   box-sizing: border-box;
@@ -711,9 +688,8 @@ display: flex;
   border-radius: 5px;
   background-color: #fff;
   font-size: 1rem;
-
-
 }
+
 #htmx-target-container {
   padding: 12px;
   border-radius: 4px;
