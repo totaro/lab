@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
     <title>Totaro - The Lab</title>
 </head>
 <body>
@@ -45,7 +46,7 @@
   </div>
   </div>
  
-    <main class="main"><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with html/css/javascript. Now includes Drag & Drop, Dom Nodes and Local Storage.</div></div>
+    <main class="main"><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with Html/Css/JavaScript/Htmx. Now includes Drag & Drop, Dom Nodes, Local Storage and Htmx get request.</div></div>
     </section></main>
 
 <div class="wrapper">
@@ -97,7 +98,6 @@
                 
             </div>
         </div>
-        
       </div>
 
 </div>
@@ -127,11 +127,46 @@
     
   </div>
 </div>
-      
-    </div>
-
+</div>
 </div>
 
+<div class="container">
+  <h1 class="heading">
+     <div class="dom-row" style="margin-bottom: 1rem;">
+          <div>Htmx get request</div>
+          <div><h6></h6></div>
+      </div></h1>
+ <div id="htmxdoms">
+  <div class="htmx-container">
+    <div class="htmx-item">
+        <button 
+        class="htmxbutton"
+        hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode&type=single"
+        hx-indicator=".loader"
+        hx-swap="innerHTML transition:true"
+        hx-target="next p">Get Jokes</button>
+    </div>
+    <div class="htmx-item">
+        <input
+          class="htmx-input"
+          type="text"
+          placeholder="Enter a keyword..."
+          hx-get="https://v2.jokeapi.dev/joke/Any?format=txt&safe-mode"
+          hx-target="#htmx-target-container"
+          hx-trigger="keyup delay:500ms"
+          hx-indicator=".loader"
+          hx-swap="innerHTML"
+          name="contains"/>
+    </div>
+    <div class="htmx-item">
+        <span class="loader htmx-indicator"></span>
+    </div>
+    <div class="htmx-item">
+        <p id="htmx-target-container" class="bounce-it">Click the button or enter keyword to load a joke...</p>
+    </div>
+  </div>
+  </div>
+</div>
 
 <!-- wrapper -->
 </div>
