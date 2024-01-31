@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <!-- htmx script -->
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
     <title>Totaro - The Lab</title>
 </head>
@@ -43,7 +44,7 @@
   <div>
   </div>
   </div>
-     <main class="main"><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with Html/Css/JavaScript/Htmx. Now includes Drag & Drop, Dom Nodes, Local Storage and Htmx Get Request.</div></div>
+     <main class="main"><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with Html/Css/JavaScript/Htmx/Angular. Now includes Drag & Drop, Dom Nodes, Local Storage, Htmx Get Request and Angular e-commerse site.</div></div>
     </section></main>
 <div class="wrapper">
 <div class="container">
@@ -151,16 +152,41 @@
         <span class="loader htmx-indicator"></span>
     </div>
     <div class="htmx-item">
-        <p id="htmx-target-container" class="bounce-it">Click the button or enter keyword to load a joke...</p>
+        <p id="htmx-target-container" class="bounce-it htmxtarget">Click the button or enter keyword to load a joke...</p>
     </div>
+  </div>
+  </div>
+</div>
+<div class="container">
+  <h1 class="heading">
+     <div class="dom-row" style="margin-bottom: 1rem;">
+          <div>Angular e-commerse site</div>
+          <div><h6></h6></div>
+      </div></h1>
+ <div id="htmxdoms">
+  <div class="htmx-container">
+    <div class="htmx-item">
+      Angular e-commerce demo site with a catalog, shopping cart, and check-out form. 
+    </div>
+    <div class="angular-item">
+      <a href="https://totaro.github.io/angular-ecom/" target="_blank"><img src="img/angular.png" class="responsive-img" alt="Angular e-commerse site"></a>
+    </div>
+    <div class="angular-item">
+
+      <button 
+        class="htmxbutton">
+      <a href="https://totaro.github.io/angular-ecom/" target="_blank">Go to App <i class="fa-solid fa-arrow-up-right-from-square"></i></a></button>
+  </div>
+    
   </div>
   </div>
 </div>
 
 <!-- wrapper -->
 </div>
-  <script src="index.js"></script>
-  <script src="dom.js"></script>
-  <script src="localstorage.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/dom.js"></script>
+  <script src="js/localstorage.js"></script>
+  
 </body>
 </html>
