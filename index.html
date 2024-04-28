@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <!-- htmx script -->
     <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <!-- TailwindCss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+      prefix: "tw-",
+      corePlugins: {
+         preflight: false,
+      }
+    }
+    </script>
+
     <title>Totaro - The Lab</title>
 </head>
 <body>
@@ -44,7 +55,7 @@
   <div>
   </div>
   </div>
-     <main class="main"><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with Html/Css/JavaScript/Htmx/Angular. Now includes Drag & Drop, Dom Nodes, Local Storage, Htmx Get Request and Angular e-commerse site.</div></div>
+     <main class="main"><section id="hero"><div class="labheader"><h1 style="font-size: 3rem;">The Lab</h1><div>The Lab is the place where I play with new miscellaneous things with Html/Css/JavaScript/Htmx/Angular. Now includes Drag & Drop, Dom Nodes, Local Storage, Htmx Get Request,Angular e-commerse site and Tailwind CSS.</div></div>
     </section></main>
 <div class="wrapper">
 <div class="container">
@@ -179,6 +190,61 @@
   </div>
     
   </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <h1 class="heading">
+     <div class="dom-row" style="margin-bottom: 1rem;">
+          <div>Tailwind CSS</div>
+          <div><h6></h6></div>
+      </div></h1>
+ <div id="htmxdoms">
+  <div class="htmx-container">
+    <div class="htmx-item" >
+      Tailwind CSS is an open source CSS framework. Here I play with Tailwind CSS (cdn), for example: responsive grid/images and image/text/button effects.
+
+    </div>
+
+    <div class="tw-mt-6 tw-grid tw-grid-cols-1 sm:tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-2 tw-gap-4 tw-p-2">
+
+
+    <div class="tw-relative">
+      <img class="tw-h-auto tw-max-w-full tw-h-64 tw-w-full tw-rounded-md tw-transition-all tw-duration-300 tw-ease-in-out tw-rounded-lg tw-cursor-pointer tw-filter tw-grayscale hover:tw-grayscale-0 tw-shadow-md hover:tw-shadow-mg hover:tw-shadow-rose-400/40" src="https://images.unsplash.com/photo-1542902093-d55926049754?q=80&w=350&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="NeonCity I">
+      <div class="tw-absolute tw-bottom-2 tw-left-2">
+        <button
+          class="tw-inset-0 tw-border tw-border-indigo-500 tw-bg-indigo-500 tw-text-white tw-rounded-md tw-px-2 tw-py-2 tw-m-1 tw-transition tw-duration-500 tw-ease tw-select-none hover:tw-bg-indigo-600 focus:tw-outline-none focus:tw-shadow-outline tw-text-sm hover:tw-text-rose-400 tw-cursor-pointer">
+          NeonCity I
+        </button>
+      </div>
+    </div>
+
+    <div class="tw-relative">
+      <img class="tw-h-auto tw-max-w-full tw-h-64 tw-w-full tw-rounded-md tw-transition-all tw-duration-300 tw-ease-in-out tw-rounded-lg tw-cursor-pointer tw-filter tw-grayscale hover:tw-grayscale-0 tw-shadow-md hover:tw-shadow-mg hover:tw-shadow-rose-400/40" src="https://images.unsplash.com/photo-1586165877141-3dbcfc059283?w=350&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmlnaHQlMjBjaXR5fGVufDB8fDB8fHww" alt="NeonCity II">
+      <div class="tw-absolute tw-bottom-2 tw-left-2">
+        <button
+          class="tw-inset-0 tw-border tw-border-indigo-500 tw-bg-indigo-500 tw-text-white tw-rounded-md tw-px-2 tw-py-2 tw-m-1 tw-transition tw-duration-500 tw-ease tw-select-none hover:tw-bg-indigo-600 focus:tw-outline-none focus:tw-shadow-outline tw-text-sm hover:tw-text-rose-400 tw-cursor-pointer">
+          NeonCity II
+        </button>
+      </div>
+    </div>
+
+    <div class="tw-relative">
+      <img class="tw-h-auto tw-max-w-full tw-h-64 tw-w-full tw-rounded-md tw-transition-all tw-duration-300 tw-ease-in-out tw-rounded-lg tw-cursor-pointer tw-filter tw-grayscale hover:tw-grayscale-0 tw-shadow-md hover:tw-shadow-mg hover:tw-shadow-rose-400/40" src="https://images.unsplash.com/photo-1548850174-70a1cf2c5f09?w=350&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmlnaHQlMjBjaXR5fGVufDB8fDB8fHww" alt="NeonCity III">
+      <div class="tw-absolute tw-bottom-2 tw-left-2">
+        <button
+          class="tw-inset-0 tw-border tw-border-indigo-500 tw-bg-indigo-500 tw-text-white tw-rounded-md tw-px-2 tw-py-2 tw-m-1 tw-transition tw-duration-500 tw-ease tw-select-none hover:tw-bg-indigo-600 focus:tw-outline-none focus:tw-shadow-outline tw-text-sm hover:tw-text-rose-400 tw-cursor-pointer">
+          NeonCity III
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+    
+  <!-- </div> -->
   </div>
 </div>
 
