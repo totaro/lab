@@ -1,1 +1,1 @@
-The Lab is the place where I play with new miscellaneous things with Html/Css/JavaScript/Htmx/Angular. Now includes Drag & Drop, Dom Nodes, Local Storage, Htmx Get Request, Angular e-commerse site and Tailwind CSS.
+The Lab is the place where I play with new miscellaneous things with Html/Css/JavaScript/Htmx/Angular/Tailwind CSS/Svelte. Now includes Drag & Drop, Dom Nodes, Local Storage, Htmx Get Request, Angular e-commerse site, Tailwind CSS and Svelte demo App.
